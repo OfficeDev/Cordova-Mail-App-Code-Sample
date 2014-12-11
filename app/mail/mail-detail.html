@@ -1,0 +1,23 @@
+﻿<ion-view title="Mail" ng-controller="mailDetailCtrl as vm">
+    <ion-content class="has-header">
+        <div class="row">
+            <div class="col col-20">Subject: </div>
+            <div class="col">{{vm.subject}}</div>
+        </div>
+        <div class="row">
+            <div class="col col-20">From: </div>
+            <div class="col">{{vm.from}}</div>
+        </div>
+        <div class="row">
+            <div class="col col-20">To: </div>
+            <div class="col">{{vm.toRecipients}}</div>
+        </div>
+        <div class="row">
+            <div class="col col-20">Date: </div>
+            <div class="col">{{vm.dateTimeReceived | date:'MM-dd-yyyy hh-mm'}}</div>
+        </div>
+        <div class="row">
+            <div class="col">{{vm.bodyPreview}}</div>
+        </div>
+    </ion-content>
+</ion-view>

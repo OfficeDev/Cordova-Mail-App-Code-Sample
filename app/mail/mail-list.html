@@ -1,0 +1,17 @@
+﻿<ion-view title="Mail" ng-controller="mailCtrl as vm">
+    <ion-content class="has-header">
+        <ion-list>
+            <ion-item ng-repeat="mail in vm.mails" type="item-link" item-type="item item-icon-left" ng-href="#/app/mail/{{mail.id}}">
+                {{mail.subject}}  <br/>
+                <label style="font-family:Calibri; font-size:smaller; color:grey">Date Received: {{mail.dateTimeReceived | date:'dd MMMM yyyy @ HH:mm'}}</label>
+                <br />
+                <label style="font-family:Calibri; font-size:smaller; color:grey">From: {{mail.from.emailAddress.name}}</label>
+                
+                <ion-option-button class="button-assertive"
+                                   ng-click="deletemail(mail)">
+                    Delete
+                </ion-option-button>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>
