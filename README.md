@@ -5,6 +5,7 @@ This sample app shows step by step how to create a Cordova app using Ionic frame
 It is highly recommended to go through [Visual Studio Tools for Apache Cordova](http://www.visualstudio.com/en-us/explore/cordova-vs.aspx) and [Getting Started with Visual Studio Tools for Apache Cordova](http://msdn.microsoft.com/en-us/library/dn771545.aspx) to setup Cordova development environment.
 
 In this tutorial, you'll these steps
+
 1. Create Blank Codrova using Visual Studio
 2. Add Ionic framework
 3. Add O365 services to app
