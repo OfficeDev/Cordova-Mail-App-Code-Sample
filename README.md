@@ -123,6 +123,11 @@ In index.html, add the following O365 references in the ``` <head> ``` element.
     // Navigate to sign-in page when app starts.
     $urlRouterProvider.otherwise('sign-in');
 ```
+### Step 6: Acquire an access token and get the Outlook services client using AngularJS factory
+
+
+
+
 
 
 
