@@ -164,5 +164,22 @@ outlookClient.me.folders.getFolder("Inbox").messages.getMessages().filter(filter
 
 **Fetch all unread mails**
 ```javascript
+var filterQuery = 'IsRead eq false';
+outlookClient.me.folders.getFolder("Inbox").messages.getMessages().filter(filterQuery).fetch()            
+.then(function (mails) {
+    // Get current page. Use getNextPage() to fetch next set of mails.
+    vm.mails = mails.currentPage;
+    $scope.$apply();                   
+ });     
+```
+
+**Fetch all mails**
+```javascript
+outlookClient.me.folders.getFolder("Inbox").messages.getMessages().fetch()            
+.then(function (mails) {
+    // Get current page. Use getNextPage() to fetch next set of mails.
+    vm.mails = mails.currentPage;
+    $scope.$apply();                   
+ });   
 
 ```
