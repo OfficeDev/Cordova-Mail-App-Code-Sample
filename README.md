@@ -152,7 +152,8 @@ function getImpMails() {
    var filterQuery = "Importance eq 'High' and DateTimeReceived gt 2000-10-20";
    outlookClient.me.folders.getFolder("Inbox").fetch()
    .then(function (folder) {
-   // Fetch all important mails sorted by DateTimeReceived.      folder.messages.getMessages().filter(filterQuery).orderBy('Importance,DateTimeReceived desc').fetch()
+   // Fetch all important mails sorted by DateTimeReceived.
+  folder.messages.getMessages().filter(filterQuery).orderBy('Importance,DateTimeReceived  desc').fetch()
 .then(function (mails) {
 // Get current page. Use getNextPage() to fetch next set of mails.
 vm.mails = mails.currentPage;
