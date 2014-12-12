@@ -15,7 +15,7 @@ In this tutorial, you'll these steps
 7. Use O365 API to fetch a.) Mails flagged as Important, b.) Unread mails and c.) All mails
 8. Use O365 API to delete mail
 
-![](/https://github.com/abhikum/mobiledev/blob/gh-pages/O365AppImages/login.png)
+![](https://github.com/abhikum/mobiledev/blob/gh-pages/O365AppImages/login.png)
 
 
 Step 1: Create Blank Codrova using Visual Studio
