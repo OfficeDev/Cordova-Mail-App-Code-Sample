@@ -145,4 +145,4 @@ var outlookClient = new Microsoft.OutlookServices.Client('https://outlook.office
 ```
 ### Step 7: Use O365 API to fetch a.) Mails flagged as Important, b.) Unread mails and c.) All mails
 
-
+**Fetch all mails flagged as important**
