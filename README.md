@@ -125,9 +125,19 @@ In index.html, add the following O365 references in the ``` <head> ``` element.
 ```
 ### Step 6: Acquire an access token and get the Outlook services client using AngularJS factory
 
-
-
-
-
+**Acquire an access token**
+```javascript
+var authContext = new O365Auth.Context();
+authContext.getIdToken("https://outlook.office365.com/")
+.then((function (token) {
+     // Get auth token
+     authtoken = token;
+     // Get user name from token object.
+     userName = token.givenName + " " + token.familyName;
+    }), function (error) {
+      // Log sign-in error message.
+      console.log('Failed to login. Error = ' + error.message);
+ });
+```
 
 
