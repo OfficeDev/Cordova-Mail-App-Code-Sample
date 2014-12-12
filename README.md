@@ -16,6 +16,9 @@ In this tutorial, you'll these steps
 8. Use O365 API to delete mail
 
 ![](https://github.com/abhikum/mobiledev/blob/gh-pages/O365AppImages/login.png)
+![](https://github.com/abhikum/mobiledev/blob/gh-pages/O365AppImages/Mail-list.png)
+![](https://github.com/abhikum/mobiledev/blob/gh-pages/O365AppImages/Mail-delete.png)
+
 
 
 Step 1: Create Blank Codrova using Visual Studio
