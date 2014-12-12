@@ -75,7 +75,7 @@ In index.html, add the following O365 references in the ``` <head> ``` element.
 - **app.js** contains ui routing to navigate to different pages
 - **service-o365.js** contains utility function to get access token, create Outlook services client object, signout and get user name. This is implemented as Angular factory so that these functions can be exposed as utility function across different pages.
 
-app.js
+**Sample app.js defining ui routing**
 ```javascript
 // Layout page
     .state('app', {
