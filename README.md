@@ -75,8 +75,54 @@ In index.html, add the following O365 references in the ``` <head> ``` element.
 - **app.js** contains ui routing to navigate to different pages
 - **service-o365.js** contains utility function to get access token, create Outlook services client object, signout and get user name. This is implemented as Angular factory so that these functions can be exposed as utility function across different pages.
 
+app.js
+```javascript
+// Layout page
+    .state('app', {
+        abstract: true,
+        url: "/app",
+        templateUrl: "app/layout/layout.html"
+    })
 
+    // Sign-in page
+     .state('sign-in', {
+         url: "/sign-in",
+         templateUrl: "app/auth/sign-in.html"
+     })   
 
+    // Mail list page
+    .state('app.mail', {
+        url: "/mail",
+        views: {
+            'mainContent': {
+                templateUrl: "app/mail/mail-tabs.html"
+            }
+        }
+    })
+
+    // Mail list containing mails flagged as important
+    .state('app.mail.imp', {
+        url: "/imp/id:important",
+        views: {
+            "tab-imp-mail": {
+                templateUrl: "app/mail/mail-list.html"
+            }
+        }
+    })
+
+    // Mail detail page
+    .state('app.mail-detail', {
+        url: "/mail/:id",
+        views: {
+            'mainContent': {
+                templateUrl: "app/mail/mail-detail.html"
+            }
+        }
+    });   
+
+    // Navigate to sign-in page when app starts.
+    $urlRouterProvider.otherwise('sign-in');
+```
 
 
 
