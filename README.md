@@ -167,5 +167,4 @@ NProgress.done();
     console.log("Error encountered while fetching inbox folder. Error: " + error.message);
   });
 };
-
 ```
