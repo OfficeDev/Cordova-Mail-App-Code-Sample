@@ -19,10 +19,17 @@ In this tutorial, you'll these steps
 ![](https://github.com/abhikum/mobiledev/blob/gh-pages/O365AppImages/Mail-list.png)
 ![](https://github.com/abhikum/mobiledev/blob/gh-pages/O365AppImages/Mail-delete.png)
 
+### Step 1: Create Blank Codrova using Visual Studio
+Create a new Cordova project in Visual Studio by choosing File --> New project --> JavaScript --> Apache Cordova Apps --> Blank App template. This sample uses JavaScript code, but you can also write your Cordova app in TypeScript.
 
+### Step 2: Add Ionic framework
+1.	From the Ionic framework website, choose Download beta.
+2.	Extract the zip
+3.	Create new folder named lib under Cordova project in Visual Studio solution explorer and copy the extracted content under lib folder.
 
-Step 1: Create Blank Codrova using Visual Studio
+![](https://github.com/abhikum/mobiledev/blob/gh-pages/O365AppImages/Ionic.png)
 
+### Step 3: Add O365 services to app
 
 
 
