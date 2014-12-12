@@ -139,5 +139,7 @@ authContext.getIdToken("https://outlook.office365.com/")
       console.log('Failed to login. Error = ' + error.message);
  });
 ```
-
-
+**create Outlook services client object**
+```javascript
+var outlookClient = new Microsoft.OutlookServices.Client('https://outlook.office365.com/api/v1.0', authtoken.getAccessTokenFn('https://outlook.office365.com'));
+```
