@@ -147,22 +147,17 @@ var outlookClient = new Microsoft.OutlookServices.Client('https://outlook.office
 
 **Fetch all mails flagged as important**
 ```javascript
-function getImpMails() {   
-   // Filter to fetch all important mails received after 2000-10-20
-   var filterQuery = "Importance eq 'High' and DateTimeReceived gt 2000-10-20";
-   outlookClient.me.folders.getFolder("Inbox").fetch()
-   .then(function (folder) {
-   // Fetch all important mails sorted by DateTimeReceived.
-  folder.messages.getMessages().filter(filterQuery).orderBy('Importance,DateTimeReceived  desc').fetch()
-.then(function (mails) {
-// Get current page. Use getNextPage() to fetch next set of mails.
-vm.mails = mails.currentPage;
-$scope.$apply();
-}, function (error) {
-    console.log("Error: " + error.message);
- });
-}, function (error) {
-    console.log("Error: " + error.message);
-  });
-};
+ function getImpMails() {          
+ // Filter to fetch all important mails received after 2000-10-20
+var filterQuery = "Importance eq 'High' and DateTimeReceived gt 2000-10-20";
+outlookClient.me.folders.getFolder("Inbox").messages.getMessages().filter(filterQuery)
+.orderBy('Importance,DateTimeReceived desc').fetch()           
+ .then(function (mails) {
+   // Get current page. Use getNextPage() to fetch next set of mails.
+   vm.mails = mails.currentPage;
+   $scope.$apply();                   
+  }, function (error) {
+     console.log("Error encountered while fetching mails. Error: " + error.message);
+    });            
+ };
 ```
