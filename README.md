@@ -30,7 +30,7 @@ Create a new Cordova project in Visual Studio by choosing File --> New project -
 ![](https://github.com/abhikum/mobiledev/blob/gh-pages/O365AppImages/Ionic.png)
 
 **Update the script references**
-- In index.html, add the following Ionic references in the <head> element, after the Cordova and platformOverrides script references.
+- In index.html, add the following Ionic references in the ``` <head> ``` element, after the Cordova and platformOverrides script references.
 
 ```html
 <script src="lib/ionic/js/ionic.bundle.min.js"></script>
