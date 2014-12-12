@@ -172,7 +172,6 @@ outlookClient.me.folders.getFolder("Inbox").messages.getMessages().filter(filter
     $scope.$apply();                   
  });     
 ```
-
 **Fetch all mails**
 ```javascript
 outlookClient.me.folders.getFolder("Inbox").messages.getMessages().fetch()            
@@ -180,6 +179,5 @@ outlookClient.me.folders.getFolder("Inbox").messages.getMessages().fetch()
     // Get current page. Use getNextPage() to fetch next set of mails.
     vm.mails = mails.currentPage;
     $scope.$apply();                   
- });   
-
+ }); 
 ```
