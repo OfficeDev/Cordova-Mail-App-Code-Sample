@@ -13,9 +13,9 @@ In this tutorial, you'll these steps
 5. Create app folder structure, UI routing and layout using Ionic controls and navigation
 6. Acquire an access token and get the Outlook services client using AngularJS factory
 7. Use O365 API to fetch a.) Mails flagged as Important, b.) Unread mails and c.) All mails
-8.) Use O365 API to delete mail
+8. Use O365 API to delete mail
 
-
+![](/https://github.com/abhikum/mobiledev/blob/gh-pages/O365AppImages/login.png)
 
 
 Step 1: Create Blank Codrova using Visual Studio
