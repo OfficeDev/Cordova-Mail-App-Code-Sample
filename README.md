@@ -146,3 +146,26 @@ var outlookClient = new Microsoft.OutlookServices.Client('https://outlook.office
 ### Step 7: Use O365 API to fetch a.) Mails flagged as Important, b.) Unread mails and c.) All mails
 
 **Fetch all mails flagged as important**
+```javascript
+function getImpMails() {
+   NProgress.start();
+   // Filter to fetch all important mails received after 2000-10-20
+   var filterQuery = "Importance eq 'High' and DateTimeReceived gt 2000-10-20";
+   outlookClient.me.folders.getFolder("Inbox").fetch()
+   .then(function (folder) {
+   // Fetch all important mails sorted by DateTimeReceived.
+      folder.messages.getMessages().filter(filterQuery).orderBy('Importance,DateTimeReceived desc').fetch()
+.then(function (mails) {
+// Get current page. Use getNextPage() to fetch next set of mails.
+vm.mails = mails.currentPage;
+$scope.$apply();
+NProgress.done();
+}, function (error) {
+    console.log("Error encountered while fetching mails. Error: " + error.message);
+ });
+}, function (error) {
+    console.log("Error encountered while fetching inbox folder. Error: " + error.message);
+  });
+};
+
+```
