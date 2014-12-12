@@ -51,3 +51,16 @@ Select Mail and click on Permissions... link on right pane and then select read 
 
 ![](https://github.com/abhikum/mobiledev/blob/gh-pages/O365AppImages/Mail-permission.png)
 
+Click Apply and Ok to set the permission and add O365 API to project. This will add Service folder containing JavaScript libraries to the project.
+
+![](https://github.com/abhikum/mobiledev/blob/gh-pages/O365AppImages/service-folder.png)
+
+In index.html, add the following O365 references in the <head> element.
+
+<script src="services/office365/scripts/o365loader.js"></script>  
+<script src="services/office365/settings/settings.js"></script>
+
+**Step 5: Create app folder structure, UI routing and layout using Ionic controls and navigation**
+
+
+
