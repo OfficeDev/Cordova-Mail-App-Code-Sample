@@ -161,3 +161,8 @@ outlookClient.me.folders.getFolder("Inbox").messages.getMessages().filter(filter
     });            
  };
 ```
+
+**Fetch all unread mails**
+```javascript
+
+```
