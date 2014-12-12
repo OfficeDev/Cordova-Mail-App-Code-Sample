@@ -29,8 +29,7 @@ Create a new Cordova project in Visual Studio by choosing File --> New project -
 
 ![](https://github.com/abhikum/mobiledev/blob/gh-pages/O365AppImages/Ionic.png)
 
-Update the script references 
-
+**Update the script references**
 •	In index.html, add the following Ionic references in the <head> element, after the Cordova and platformOverrides script references.
 
 <script src="lib/ionic/js/ionic.bundle.min.js"></script>
@@ -39,10 +38,16 @@ Update the script references
 <link href="lib/ionic/css/ionic.min.css" rel="stylesheet" />
 
 ### Step 3: Add O365 services to app
+Refer [Set up your Office 365 development environment](http://msdn.microsoft.com/en-us/office/office365/howto/setup-development-environment) documentation on Signing up for an Office 365 Developer Site and Set up Azure Active Directory access for your Developer Site.
 
+Follow these steps to add and configure Office 365 APIs by using the Services Manager in Visual Studio.
+1.	Download and install the Office 365 API tools from the Visual Studio Gallery
+2.	On the project node, right click and choose **Add --> Connected Service**
+3.	At the top of the Services Manager dialog box, choose the Office 365 link, and then choose Register your app. Sign in with a tenant administrator account for your Office 365 developer organization.
+![](https://github.com/abhikum/mobiledev/blob/gh-pages/O365AppImages/ServiceManager.png)
 
+### Step 4: Set permissions to O365 mail tenet to grant appropiate access to app
+Select Mail and click on Permissions... link on right pane and then select read and write to user's mail as app will need to perform read and delete mail operation. Similarly if you want your app to send mail then select mail as a user option.
 
-
-
-
+![](https://github.com/abhikum/mobiledev/blob/gh-pages/O365AppImages/Mail-permission.png)
 
