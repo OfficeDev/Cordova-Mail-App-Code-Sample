@@ -33,29 +33,11 @@ Create a new Cordova project in Visual Studio by choosing File --> New project -
 - In index.html, add the following Ionic references in the <head> element, after the Cordova and platformOverrides script references.
 
 ```html
-<pre>
-    <div class="container">
-        <div class="block two first">
-            <h2>Your title</h2>
-            <div class="wrap">
-            <script src="lib/ionic/js/ionic.bundle.min.js"></script>
-            </div>
-        </div>
-    </div>
-</pre>
+<script src="lib/ionic/js/ionic.bundle.min.js"></script>
 ```
 - In index.html, add following ionic css reference.
 ```html
-<pre>
-    <div class="container">
-        <div class="block two first">
-            <h2>Your title</h2>
-            <div class="wrap">
-            <link href="lib/ionic/css/ionic.min.css" rel="stylesheet" />
-            </div>
-        </div>
-    </div>
-</pre>
+ <link href="lib/ionic/css/ionic.min.css" rel="stylesheet" />
 ```
 ### Step 3: Add O365 services to app
 Refer [Set up your Office 365 development environment](http://msdn.microsoft.com/en-us/office/office365/howto/setup-development-environment) documentation on Signing up for an Office 365 Developer Site and Set up Azure Active Directory access for your Developer Site.
