@@ -58,7 +58,7 @@ Click Apply and Ok to set the permission and add O365 API to project. This will 
 
 ![](https://github.com/abhikum/mobiledev/blob/gh-pages/O365AppImages/service-folder.png)
 
-In index.html, add the following O365 references in the ```html <head> ``` element.
+In index.html, add the following O365 references in the ``` <head> ``` element.
 ```html
 <script src="services/office365/scripts/o365loader.js"></script>  
 <script src="services/office365/settings/settings.js"></script>
