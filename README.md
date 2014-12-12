@@ -144,3 +144,5 @@ authContext.getIdToken("https://outlook.office365.com/")
 var outlookClient = new Microsoft.OutlookServices.Client('https://outlook.office365.com/api/v1.0', authtoken.getAccessTokenFn('https://outlook.office365.com'));
 ```
 ### Step 7: Use O365 API to fetch a.) Mails flagged as Important, b.) Unread mails and c.) All mails
+
+
