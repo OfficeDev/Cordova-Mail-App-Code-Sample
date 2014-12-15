@@ -197,3 +197,5 @@ Outlook client object can be used to delete mail, first get the mail which you w
   });
 });
 ```
+
+**Step 9: Run the app**
