@@ -153,11 +153,9 @@ In index.html, add the following O365 references in the ``` <head> ``` element.
         <ion-tab title="Imp" icon="ion-star" ui-sref="app.mail.imp">
             <ion-nav-view name="tab-imp-mail"></ion-nav-view>
         </ion-tab>
-
         <ion-tab title="Unread" icon="ion-ios7-email-outline" ui-sref="app.mail.unread">
             <ion-nav-view name="tab-unread-mail"></ion-nav-view>
         </ion-tab>
-
         <ion-tab title="All" icon="ion-email" ui-sref="app.mail.all">
             <ion-nav-view name="tab-all-mail"></ion-nav-view>
         </ion-tab>
