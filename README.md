@@ -14,6 +14,7 @@ In this tutorial, you'll these steps
 6. Acquire an access token and get the Outlook services client using AngularJS factory
 7. Use O365 API to fetch a.) Mails flagged as Important, b.) Unread mails and c.) All mails
 8. Use O365 API to delete mail
+9. Run the app!
 
 ![](https://github.com/abhikum/mobiledev/blob/gh-pages/O365AppImages/login.png)
 ![](https://github.com/abhikum/mobiledev/blob/gh-pages/O365AppImages/Mail-list.png)
@@ -180,4 +181,19 @@ outlookClient.me.folders.getFolder("Inbox").messages.getMessages().fetch()
     vm.mails = mails.currentPage;
     $scope.$apply();                   
  }); 
+```
+
+**Step 8: Use O365 API to delete mail**
+Outlook client object can be used to delete mail, first get the mail which you want to delete using mail id and then call delete() on mail object to delete the particular mail. delete() permanently deletes the mail, to move the mail to Deleted Items, use move() function.
+```javascript
+ outlookClient.me.folders.getFolder("Inbox").messages.getMessage(mail.id).fetch()
+ .then(function (mail) {
+     // Delete the mail.
+     mail.delete()
+     .then((function (response) {
+          console.log('Mail deleted successfully.');
+      }), function (error) {                            
+          console.log('Fail to delete mail. Error = ' + error.message);                            
+  });
+});
 ```
