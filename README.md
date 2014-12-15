@@ -222,7 +222,7 @@ outlookClient.me.folders.getFolder("Inbox").messages.getMessages().fetch()
  }); 
 ```
 
-**Step 8: Use O365 API to delete mail**
+### Step 8: Use O365 API to delete mail
 Outlook client object can be used to delete mail, first get the mail which you want to delete using mail id and then call delete() on mail object to delete the particular mail. delete() permanently deletes the mail, to move the mail to Deleted Items, use move() function.
 ```javascript
  outlookClient.me.folders.getFolder("Inbox").messages.getMessage(mail.id).fetch()
