@@ -204,6 +204,6 @@ Outlook client object can be used to delete mail, first get the mail which you w
 
 ![](https://github.com/abhikum/mobiledev/blob/gh-pages/O365AppImages/Android%20-%20Run.PNG)
 
-2. F5
+**F5 to run the app**
 
 Refer [Deploy and Run Your App Built with Visual Studio Tools for Apache Cordova](http://msdn.microsoft.com/en-us/library/dn757049.aspx) on more detail on running the Cordova app across different platforms.
