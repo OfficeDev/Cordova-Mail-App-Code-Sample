@@ -13,10 +13,7 @@
             NProgress.start();
 
             // Fetch Inbox folder
-            outlookClient.me.folders.getFolder("Inbox").fetch()
-            .then(function (folder) {
-                // Fetch mail with specified mail id.
-                folder.messages.getMessage($stateParams.id).fetch()
+            outlookClient.me.folders.getFolder("Inbox").messages.getMessage($stateParams.id).fetch()           
                 .then(function (mail) {
                     // Mail subject
                     vm.subject = mail.subject;
@@ -39,8 +36,7 @@
                     vm.toRecipients = toRecipients;
                     $scope.$apply();
                     NProgress.done();
-                });
-            });          
+                });                      
         };       
 
         vm.getMail();

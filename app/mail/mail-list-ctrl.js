@@ -24,17 +24,13 @@
 
             NProgress.start();
             // Fetch Inbox folder
-            outlookClient.me.folders.getFolder("Inbox").fetch()
-            .then(function (folder) {
-                // Fetch mails under Inbox folder with filter.
-                folder.messages.getMessages().filter(filterQuery).fetch()
+            outlookClient.me.folders.getFolder("Inbox").messages.getMessages().filter(filterQuery).fetch()            
                 .then(function (mails) {
                     // Get current page. Use getNextPage() to fetch next set of mails.
                     vm.mails = mails.currentPage;
                     $scope.$apply();
                     NProgress.done();
-                });
-            });           
+                });                     
         };
 
         // Get all mails flagged as important.
@@ -42,10 +38,7 @@
             NProgress.start();
             // Filter to fetch all important mails received after 2000-10-20
             var filterQuery = "Importance eq 'High' and DateTimeReceived gt 2000-10-20";
-            outlookClient.me.folders.getFolder("Inbox").fetch()
-            .then(function (folder) {
-                // Fetch all important mails sorted by DateTimeReceived.
-                folder.messages.getMessages().filter(filterQuery).orderBy('Importance,DateTimeReceived desc').fetch()
+            outlookClient.me.folders.getFolder("Inbox").messages.getMessages().filter(filterQuery).orderBy('Importance,DateTimeReceived desc').fetch()           
                 .then(function (mails) {
                     // Get current page. Use getNextPage() to fetch next set of mails.
                     vm.mails = mails.currentPage;
@@ -53,10 +46,7 @@
                     NProgress.done();
                 }, function (error) {
                     console.log("Error encountered while fetching mails. Error: " + error.message);
-                });
-            }, function (error) {
-                console.log("Error encountered while fetching inbox folder. Error: " + error.message);
-            });
+                });            
         };
 
         // Delete mail
@@ -98,7 +88,6 @@
             outlookClient = app365api.exchangeClientObj();
             // Get mails.
             getMails();
-
         };
 
         vm.loadList();
