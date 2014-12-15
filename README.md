@@ -199,3 +199,10 @@ Outlook client object can be used to delete mail, first get the mail which you w
 ```
 
 **Step 9: Run the app**
+1. Select Android and target either as Android Emulator or device. Please note currently Ripple is not supported for O365 auth.
+
+![](https://github.com/abhikum/mobiledev/blob/gh-pages/O365AppImages/Android%20-%20Run.PNG)
+
+2. F5
+
+Refer [Deploy and Run Your App Built with Visual Studio Tools for Apache Cordova](http://msdn.microsoft.com/en-us/library/dn757049.aspx) on more detail on running the Cordova app across different platforms.
