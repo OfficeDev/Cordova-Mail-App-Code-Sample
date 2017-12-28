@@ -246,3 +246,6 @@ Outlook client object can be used to delete mail, first get the mail which you w
 **F5 to run the app**
 
 Refer [Deploy and Run Your App Built with Visual Studio Tools for Apache Cordova](http://msdn.microsoft.com/en-us/library/dn757049.aspx) on more detail on running the Cordova app across different platforms.
+
+
+This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information, see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
